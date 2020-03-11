@@ -5,7 +5,8 @@
     <title>Bài8</title>
     <script>
         function tinh(so) {
-            if ((so > 0) && (so< 120)) {
+            let _so = parseInt(so)
+            if ((_so > 0) && (_so< 120)) {
                 document.getElementById('xuat').innerHTML = 'Đây là tuổi của một người'
             }else {
                 document.getElementById('xuat').innerHTML = 'Đây không phải là tuổi của một người'
