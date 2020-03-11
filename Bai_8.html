@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài8</title>
+    <script>
+        function tinh(so) {
+            if ((so > 0) && (so< 120)) {
+                document.getElementById('xuat').innerHTML = 'Đây là tuổi của một người'
+            }else {
+                document.getElementById('xuat').innerHTML = 'Đây không phải là tuổi của một người'
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="so" type="text"/>
+<button type="button" onclick="xuat.value=tinh(so.value)">Click</button>
+<div id="xuat"></div>
+</body>
+</html>
