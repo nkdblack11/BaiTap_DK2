@@ -5,21 +5,26 @@
     <title>Bài9</title>
     <script>
         function xetbacanh(so1, so2, so3) {
-            console.log(so1,so2,so3)
-            _so1 = parseInt(so1)
-            _so2 = parseInt(so2)
-            _so3 = parseInt(so3)
-            if ((_so1 > 0) && (_so2 > 0) && (_so3 > 0)) {
-                if ((_so1 + _so2) > _so3) {
-                    if ((_so2 + _so3) > _so1) {
-                        if ((_so1 + _so3) > _so2) {
-                            document.getElementById('xuat').innerHTML = 'Ba số là cạnh của một tam giác đều'
-                        }else {
-                            document.getElementById('xuat').innerHTML = 'Ba số không phải là cạnh của một tam giác đều'
-                        }
-                    }
-                }
+            let _so1 = parseInt(so1)
+            let _so2 = parseInt(so2)
+            let _so3 = parseInt(so3)
+            if ((_so1 <= 0) || (_so2 <= 0) || (_so3 <= 0)) {
+                document.getElementById('xuat').innerHTML = 'Ba số không phải là cạnh của một tam giác đều';
+                return false;
             }
+            if ((_so1 + _so2) < _so3) {
+                document.getElementById('xuat').innerHTML = 'Ba số không phải là cạnh của một tam giác đều';
+                return false;
+            }
+            if ((_so2 + _so3) < _so1) {
+                document.getElementById('xuat').innerHTML = 'Ba số không phải là cạnh của một tam giác đều';
+                return false;
+            }
+            if ((_so1 + _so3) < _so2) {
+                document.getElementById('xuat').innerHTML = 'Ba số không phải là cạnh của một tam giác đều';
+                return false;
+            }
+            document.getElementById('xuat').innerHTML = 'Ba số là cạnh của một tam giác đều';
         }
     </script>
 </head>
@@ -31,7 +36,7 @@
 <input id="so2" type="text"/>
 <p>Nhập số c</p>
 <input id="so3" type="text"/>
-<button type="button" onclick="xuat.value=xetbacanh(so1.value,so2.value,so3.value)">Click</button>
+<button type="button" onclick="xetbacanh(so1.value,so2.value,so3.value)">Click</button>
 <div id="xuat"></div>
 </body>
 </html>
