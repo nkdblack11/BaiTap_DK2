@@ -5,7 +5,10 @@
     <title>Bai6</title>
 <script>
     function tinh(so1,so2) {
-
+        let A = parseInt(so1)
+        let B = parseInt(so2)
+        let x = -B / A
+        document.getElementById('xuat').innerHTML = 'Kết Quả :' +' '+ x
     }
 </script>
 </head>
@@ -16,7 +19,7 @@ Nhập A
 <input id="so1" type="text"/>
 Nhập B
 <input id="so2" type="text"/>
-<button type="button">Click</button>
+<button type="button" onclick="xuat.value=tinh(so1.value,so2.value)">Click</button>
 <div id="xuat"></div>
 </body>
 </html>
