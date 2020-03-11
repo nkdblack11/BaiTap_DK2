@@ -7,8 +7,12 @@
     function tinh(so1,so2) {
         let A = parseInt(so1)
         let B = parseInt(so2)
-        let x = -B / A
+        if (A != 0) {
+           let x = -B / A
         document.getElementById('xuat').innerHTML = 'Kết Quả :' +' '+ x
+        }else {
+            document.getElementById('xuat').innerHTML = 'A phải # 0'
+        }
     }
 </script>
 </head>
