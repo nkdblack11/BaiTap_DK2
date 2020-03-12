@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai11</title>
+    <script language="JavaScript">
+        function tinh_tien_dien(so) {
+            let _so = parseInt(so)
+            let a1 = _so * 1678
+            let a2 = _so - 50
+            let a3 = _so - 100
+            let a4 = _so - 100
+            let a5 = _so - 100
+            let a6 = _so - 100
+            console.log(so,_so,a1,a2,a3)
+            if (_so <= 50) {
+                kq = a1
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là ' + kq + 'Nghìn đồng'
+                return false
+            }else if ((_so >50) && (_so <=100)){
+                kq = (a2 * 1734) + 83900
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là ' + kq + 'Nghìn đồng'
+                return false
+            }else if ((_so > 100) && (_so <=200)){
+                kq = (a3 * 2014) + 86700
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là ' + kq + 'Nghìn đồng'
+                return false
+            }else if ((_so > 200) && (_so <=300)){
+                kq = (a4 * 2536) + 201400
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là ' + kq + 'Nghìn đồng'
+                return false
+            }else if ((_so > 300) && (_so <=400)){
+                kq = (a5 * 2834) + 253600
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là ' + kq + 'Nghìn đồng'
+                return false
+            }else {
+                kq = (a6 * 2927) + 283400
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là ' + kq + 'Nghìn đồng'
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Chương trình tính giá điện</h1>
+<h3>Nhập số điện tiêu dùng của bạn</h3>
+<input id="so" type="text">
+<button type="button" onclick="tinh_tien_dien(so.value)">count</button>
+<div style="color: blue" id="xuat"></div>
+</body>
+</html>
