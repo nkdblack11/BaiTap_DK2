@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài10</title>
+    <script>
+        function tinhthue(nhap) {
+            let so = parseInt(nhap)
+            let tnktt = 9000000
+            let x1 = (so - tnktt) / 1000000
+            let x2 = (so - (tnktt + 5000000)) / 1000000
+            let x3 = (so - (tnktt + 10000000)) / 1000000
+            let x4 = (so - (tnktt + 18000000)) / 1000000
+            let x5 = (so - (tnktt + 32000000)) / 1000000
+            let x6 = (so - (tnktt + 52000000)) / 1000000
+            let x7 = (so - (tnktt + 80000000)) / 1000000
+            let kq = 0
+            console.log(x1,x2,x3,x4,x5,x6,x7)
+            if ((x1 > 0) && (x1 <= 5)) {
+                kq = ((x1 * 5) / 100) * 1000000
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là: ' + ' ' + kq
+                return false
+            } else if(x1 > 5) {
+                kq = (5*5)/100
+            }
+            if ((x2 > 0) && (x2 <= 5)) {
+                let y2 = (x2 * 10) / 100
+                kq = (kq + y2) * 1000000
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là: ' + ' ' + kq
+                return false
+            }else if(x2 > 5){
+                kq = kq + ((5*10)/100)
+            }
+            if ((x3 > 0) && (x3 <= 8)) {
+                let y3 = (x3 * 15) / 100
+                kq = (kq + y3) * 1000000
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là: ' + ' ' + kq
+                return false
+            }else if(x3 > 8){
+                kq = kq + ((8*15)/100)
+            }
+            if ((x4 > 0) && (x4 <= 14)) {
+                let y4 = (x4 * 20) / 100
+                kq = (kq + y4) * 1000000
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là: ' + ' ' + kq
+                return false
+            } else if(x4 > 14){
+                kq = kq + ((14*20)/100)
+            }
+            if ((x5 > 0) && (x5 <= 20)) {
+                let y5 = (x5 * 25) / 100
+                kq = (kq + y5) * 1000000
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là: ' + ' ' + kq
+                return false
+            } else if(x5 > 20){
+                kq = kq + ((20*25)/100)
+            }
+            if ((x6 > 0) && (x6 <= 28)) {
+                let y6 = (x6 * 30) / 100
+                kq = (kq + y6)  * 1000000
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là: ' + ' ' + kq
+                return false
+            } else if(x6 > 14){
+                kq = kq + ((28*30)/100)
+            }
+            if(x7 >0){
+                kq = (kq + ((x7 * 35) / 100)) * 1000000
+                document.getElementById('xuat').innerHTML = 'Số tiền bạn phải đóng là: ' + ' ' + kq
+                return false
+            }
+            document.getElementById('xuat').innerHTML = 'Bạn Không phải đóng thuế thu nhập cá nhân'
+        }
+    </script>
+</head>
+<body>
+<h1>Viết chương trình tính thuế thu nhập cá nhân.</h1>
+<p>Nhập tổng số lương một tháng của bạn</p>
+<input id="nhap" type="text"/>
+<button type="button" onclick="tinhthue(nhap.value)">Click</button>
+<div id="xuat"></div>
+</body>
+</html>
